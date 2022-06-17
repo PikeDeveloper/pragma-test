@@ -51,17 +51,17 @@ class _List extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return catList.isEmpty
-        ? Text("Lista vacía")
-        : Expanded(
-            child: ListView.builder(
-              itemCount: catList.length,
-              itemBuilder: (BuildContext context, int index) {
-                return CatCard(
-                  cat: catList[index],
-                );
-              },
-            ),
-          );
+    return 
+    catList.isEmpty
+        ?
+         Text("Lista vacía")
+        : ListView.builder(
+          itemCount: catList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return CatCard(
+              cat: catList[index],
+            );
+          },
+        );
   }
 }

@@ -53,7 +53,6 @@ class CatsProvider with ChangeNotifier {
   }
 
   void getAll() async {
-    print("getAll");
     loading = true;
     cats = await CatsRepository.getAll();
     filteredCats = cats;

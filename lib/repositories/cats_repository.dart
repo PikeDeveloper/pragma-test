@@ -21,14 +21,11 @@ class CatsRepository {
 
       List jsonResponse = jsonDecode(response.body);
       cats = jsonResponse.map<CatsModel>((element) {
-        print(element);
         return CatsModel.fromJson(element);
       }).toList();
 
-      print("${cats.length} cats");
       return cats;
     } catch (e) {
-      print(e);
       return [];
     }
   }
